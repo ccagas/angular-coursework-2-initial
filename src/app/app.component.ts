@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-coursework-2-initial';
+
+  display: boolean = true;
+
+  clicks: any[] = [];
+
+  onToggleDisplay() {
+    this.display = !this.display;
+    this.clicks.push(this.clicks.length);
+  }
 }
